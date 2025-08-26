@@ -322,7 +322,7 @@ const DailyQuiz = ({ onQuizComplete, onClose }) => {
               className="w-20 h-20 bg-smash-success/10 rounded-full flex items-center justify-center mx-auto mb-4"
             >
               <Trophy className="w-10 h-10 text-smash-success" />
-            </div>
+            </motion.div>
             <h3 className="text-xl font-semibold text-gray-900 mb-2">Quiz Completed!</h3>
             <p className="text-gray-600 mb-4">
               Great job! You've completed today's knowledge quiz.
