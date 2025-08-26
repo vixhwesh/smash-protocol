@@ -42,6 +42,7 @@ export const Web3Provider = ({ children }) => {
     try {
       if (wallet?.provider) {
         const network = await wallet.provider.getNetwork();
+        // eslint-disable-next-line no-undef
         const isIrysTestnet = network.chainId === BigInt(IRYS_CONFIG.CHAIN_ID);
         setNetwork(isIrysTestnet ? 'irys-testnet' : 'wrong-network');
         return isIrysTestnet;
