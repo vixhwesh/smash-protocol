@@ -9,7 +9,6 @@ import {
   Users,
   Star,
   X,
-  ExternalLink,
   AlertCircle
 } from 'lucide-react';
 import { motion } from 'framer-motion';
@@ -17,7 +16,7 @@ import { PROTOCOL_CONFIG } from '../config/web3';
 import toast from 'react-hot-toast';
 
 const Auth = ({ onClose }) => {
-  const { connectAndSwitch, userData, activateUser } = useWeb3();
+  const { connectAndSwitch, activateUser } = useWeb3();
   const [isConnecting, setIsConnecting] = useState(false);
   const [referralCode, setReferralCode] = useState('');
   const [username, setUsername] = useState('');
