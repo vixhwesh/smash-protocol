@@ -3,7 +3,6 @@ import { auth, db } from '../config/firebase';
 import { 
   connectWallet, 
   switchToIrysTestnet, 
-  getProvider,
   IRYS_CONFIG,
   PROTOCOL_CONFIG
 } from '../config/web3';
@@ -107,7 +106,7 @@ export const Web3Provider = ({ children }) => {
   const getUserData = async (uid) => {
     try {
       const userRef = doc(db, 'users', uid);
-      const userSnap = await userSnap.get();
+      const userSnap = await getDoc(userRef);
       
       if (userSnap.exists()) {
         return userSnap.data();
@@ -306,14 +305,14 @@ export const Web3Provider = ({ children }) => {
     });
 
     return unsubscribe;
-  }, []);
+  }, [getUserData]);
 
   // Check network when wallet changes
   useEffect(() => {
     if (wallet) {
       checkNetwork();
     }
-  }, [wallet]);
+  }, [wallet, checkNetwork]);
 
   const value = {
     wallet,
