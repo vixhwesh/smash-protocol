@@ -10,7 +10,7 @@ import {
   VolumeX
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { PROTOCOL_CONFIG } from '../config/web3';
+
 import { RewardedVideo, ADSENSE_CONFIG } from '../config/adsense';
 import toast from 'react-hot-toast';
 
