@@ -16,8 +16,7 @@ import {
   Target,
   Zap
 } from 'lucide-react';
-import { motion } from 'framer-motion';
-import { PROTOCOL_CONFIG } from '../config/web3';
+
 import toast from 'react-hot-toast';
 
 const ProtocolProfile = () => {
