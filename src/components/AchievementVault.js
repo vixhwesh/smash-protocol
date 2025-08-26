@@ -87,13 +87,7 @@ const AchievementVault = () => {
     }
   };
 
-  const getStatusBgColor = (status, baseColor) => {
-    switch (status) {
-      case 'completed': return 'bg-smash-success/10';
-      case 'in-progress': return `bg-${baseColor}/10`;
-      default: return 'bg-gray-100';
-    }
-  };
+
 
   return (
     <div className="space-y-6">
