@@ -217,7 +217,7 @@ const CommandCenter = () => {
     if (userData?.lastMining) {
       setNextMiningTime(getNextMiningTime());
     }
-  }, [userData]);
+  }, [userData, getNextMiningTime]);
 
   const activities = [
     {
